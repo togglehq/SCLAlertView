@@ -155,13 +155,13 @@ SCLTimerDisplay *buttonTimer;
     kCircleHeight = 56.0f;
     kCircleHeightBackground = 62.0f;
     kActivityIndicatorHeight = 40.0f;
-    kTitleTop = 30.0f;
+    kTitleTop = 20.0f;
     kTitleHeight = 40.0f;
     self.subTitleY = 70.0f;
     self.subTitleHeight = 90.0f;
     self.circleIconHeight = 20.0f;
     self.windowWidth = windowWidth;
-    self.windowHeight = 178.0f;
+    self.windowHeight = 168.0f;
     self.shouldDismissOnTapOutside = NO;
     self.usingNewWindow = NO;
     self.canAddObservers = YES;
@@ -170,14 +170,15 @@ SCLTimerDisplay *buttonTimer;
     self.showAnimationType = SlideInFromTop;
     self.backgroundType = Shadow;
     self.tintTopCircle = YES;
+    self.cornerRadius = 10.0f;
     
     // Font
-    _titleFontFamily = @"HelveticaNeue";
+    _titleFontFamily = @"HelveticaNeue-Bold";
     _bodyTextFontFamily = @"HelveticaNeue";
-    _buttonsFontFamily = @"HelveticaNeue-Bold";
-    _titleFontSize = 20.0f;
-    _bodyFontSize = 14.0f;
-    _buttonsFontSize = 14.0f;
+    _buttonsFontFamily = @"HelveticaNeue";
+    _titleFontSize = 22.0f;
+    _bodyFontSize = 20.0f;
+    _buttonsFontSize = 20.0f;
     
     // Init
     _labelTitle = [[UILabel alloc] init];
@@ -237,7 +238,7 @@ SCLTimerDisplay *buttonTimer;
     
     // Content View
     _contentView.backgroundColor = [UIColor whiteColor];
-    _contentView.layer.cornerRadius = 5.0f;
+    _contentView.layer.cornerRadius = 6.0f;
     _contentView.layer.masksToBounds = YES;
     _contentView.layer.borderWidth = 0.5f;
     [_contentView addSubview:_viewText];    
@@ -687,6 +688,7 @@ SCLTimerDisplay *buttonTimer;
 {
     // Add button
     SCLButton *btn = [[SCLButton alloc] initWithWindowWidth:self.windowWidth];
+    
     btn.layer.masksToBounds = YES;
     [btn setTitle:title forState:UIControlStateNormal];
     btn.titleLabel.font = [UIFont fontWithName:_buttonsFontFamily size:_buttonsFontSize];

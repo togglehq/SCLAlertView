@@ -11,7 +11,7 @@
 
 #define MARGIN_BUTTON 12.0f
 #define DEFAULT_WINDOW_WIDTH 240
-#define MIN_HEIGHT 35.0f
+#define MIN_HEIGHT 55.0f
 
 @implementation SCLButton
 
@@ -60,7 +60,7 @@
     self.frame = CGRectMake(0.0f, 0.0f, windowWidth - (MARGIN_BUTTON * 2), MIN_HEIGHT);
     self.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
     self.titleLabel.textAlignment = NSTextAlignmentCenter;
-    self.layer.cornerRadius = 3.0f;
+    self.layer.cornerRadius = 6.0f;
 }
 
 - (void)adjustWidthWithWindowWidth:(CGFloat)windowWidht numberOfButtons:(NSUInteger)numberOfButtons
@@ -115,6 +115,10 @@
     if (buttonConfig[@"backgroundColor"])
     {
         self.defaultBackgroundColor = buttonConfig[@"backgroundColor"];
+    }
+    if (buttonConfig[@"font"])
+    {
+        [self.titleLabel setFont:buttonConfig[@"font"]];
     }
     if (buttonConfig[@"textColor"])
     {
