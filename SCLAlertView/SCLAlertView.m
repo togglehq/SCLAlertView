@@ -176,7 +176,7 @@ SCLTimerDisplay *buttonTimer;
     _titleFontFamily = @"HelveticaNeue-Bold";
     _bodyTextFontFamily = @"HelveticaNeue";
     _buttonsFontFamily = @"HelveticaNeue";
-    _titleFontSize = 22.0f;
+    _titleFontSize = 20.0f;
     _bodyFontSize = 20.0f;
     _buttonsFontSize = 20.0f;
     
@@ -249,8 +249,8 @@ SCLTimerDisplay *buttonTimer;
     
     // Colors
     self.backgroundViewColor = [UIColor whiteColor];
-    _labelTitle.textColor = UIColorFromHEX(0x4D4D4D); //Dark Grey
-    _viewText.textColor = UIColorFromHEX(0x4D4D4D); //Dark Grey
+    _labelTitle.textColor = UIColorFromHEX(0x424242); //Dark Grey
+    _viewText.textColor = UIColorFromHEX(0x555555); //Dark Grey
     _contentView.layer.borderColor = UIColorFromHEX(0xCCCCCC).CGColor; //Light Grey
 }
 
